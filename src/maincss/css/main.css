@@ -425,6 +425,10 @@ header {
     background-color: white;
 
 }
+
+.headfaq{
+    background-color: var(--primary-color);
+}
 /*  */
 
 /* FOOTER */

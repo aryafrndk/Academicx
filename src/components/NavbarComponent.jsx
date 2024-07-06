@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { navLinks } from "../data/index";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import React from "react";
 
 const NavbarComponent = () => {
   const [changeColor, setChangeColor] = useState(false);
   const [expanded, setExpanded] = useState(false);
+  const location = useLocation();
 
   const changeBackgroundColor = () => {
     if (window.scrollY > 10 || expanded) {
@@ -61,7 +62,7 @@ const NavbarComponent = () => {
             <div className="text-center">
               <button
                 className={`btn rounded-5 ${
-                  changeColor ? "btn-outline-dark" : "btn-outline-light"
+                  changeColor || location.pathname !== "/" ? "btn-outline-dark" : "btn-outline-light"
                 }`}
               >
                 Join with Us

@@ -2,7 +2,7 @@ import FaqComponent from "../components/FaqComponent"
 
 const FaqPage = () => {
   return (
-    <div className="pt-5">
+    <div className="headfaq pt-5">
       <FaqComponent />
     </div>
   )
