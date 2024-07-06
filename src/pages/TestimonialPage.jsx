@@ -18,20 +18,20 @@ const TestimonialPage = () => {
             </Col>
           </Row>
           <Row className="row-cols-lg-3 row-cols-1 animate__animated animate__fadeInUp animate__delay-1s">
-            {testimonial.map((data) => {
-              return (
-                <Col key={data.id} className=" mb-5">
-                  <p className="desc shadow-sm">{data.desc}</p>
-                  <div className="people">
-                    <img src={data.image} alt="" />
+            {testimonial.map((data) => (
+              <Col key={data.id} className="mb-5">
+                <div className="testimonial-card shadow-sm p-3">
+                  <p className="desc">{data.desc}</p>
+                  <div className="people d-flex align-items-center mt-3">
+                    <img src={data.image} alt={`${data.name}'s picture`} className="me-3 rounded-circle" />
                     <div>
                       <h5 className="mb-1">{data.name}</h5>
                       <p className="m-0 fw-bold">{data.skill}</p>
                     </div>
                   </div>
-                </Col>
-              );
-            })}
+                </div>
+              </Col>
+            ))}
           </Row>
         </Container>
       </div>
