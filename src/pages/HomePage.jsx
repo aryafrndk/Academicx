@@ -86,7 +86,7 @@ const HomePage = () => {
                   <h5 className="mb-5 px-3">{kelas.title}</h5>
                   <div className="ket d-flex justify-content-between align-items-center px-3 pb-3">
                     <p className="m-0 text-pimary fw-bold">{kelas.price}</p>
-                    <button className="btn btn-danger rounded-2">
+                    <button className="btn btn-dark rounded-2">
                       {kelas.buy}
                     </button>
                   </div>
@@ -97,7 +97,7 @@ const HomePage = () => {
           <Row>
             <Col className="text-center" data-aos="fade-up" data-aos-duration="1000">
               <button
-                className="btn btn-success rounded-5 btn-lg"
+                className="btn btn-dark rounded-5 btn-lg"
                 onClick={() => navigate("/kelas")}
               >
                 Lihat Semua Kelas
